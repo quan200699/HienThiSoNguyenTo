@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HienThiSoNguyenTo</title>
+</head>
+<body onload="Run()">
+<script>
+    function KTSoNguyenTo(number) {
+        if(number<2)
+        {
+            return 0;
+        }
+        for(var i = 2;i*i<=number;i++)
+        {
+            if(number%i==0)
+            {
+                return 0;
+            }
+        }
+        return 1;
+    }
+    function Run() {
+        let n = parseInt(prompt("Nhap n:"));
+        let count = 0;
+        for (var i = 0;i<=n;i++)
+        {
+            if(KTSoNguyenTo(i))
+            {
+                document.write(i);
+                document.write('</br>')
+                count++;
+            }
+            if(count==20)
+            {
+                break;
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
